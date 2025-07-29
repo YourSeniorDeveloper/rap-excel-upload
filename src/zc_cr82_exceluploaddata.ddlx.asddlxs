@@ -1,0 +1,29 @@
+@Metadata.layer: #CORE
+
+annotate entity ZC_CR82_ExcelUploadData with
+{
+
+  @UI.lineItem: [{ position: 10, type: #FOR_ACTION, dataAction: 'uploadExcelFile', label: 'Upload Excel' }]
+  Uuid;
+  @UI.lineItem: [{ position: 20, label: 'File Name' }]
+  FileName;
+  @UI.lineItem: [{ position: 30, label: 'Upload Date' }]
+  UploadDateTime;
+  @UI.lineItem: [{ position: 40, label: 'Data Column 1' }]
+  DataColumn1;
+  @UI.lineItem: [{ position: 50, label: 'Data Column 2' }]
+  DataColumn2;
+  @UI.lineItem: [{ position: 60, label: 'Data Column 3' }]
+  DataColumn3;
+  @UI.lineItem: [{ position: 70, label: 'Data Column 4' }]
+  DataColumn4;
+  @UI.lineItem: [{ position: 80, label: 'Data Column 5' }]
+  DataColumn5;
+  @UI.lineItem: [{ position: 90, label: 'Status' }]
+  StatusCode;
+  @UI.lineItem: [{ position: 100, label: 'Data Mod 1' }]
+  LastChangedAt;
+  @UI.lineItem: [{ position: 110, label: 'Local Last Changed At' }]
+  LocalLastChangedAt;
+
+}
