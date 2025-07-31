@@ -7,5 +7,5 @@ define behavior for ZC_CR82_ExcelUploadData //alias <alias_name>
   use update;
   use delete;
 
-  use action uploadExcelFile;
+  //use action uploadExcelFile;
 }

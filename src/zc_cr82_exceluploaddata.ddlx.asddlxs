@@ -1,29 +1,39 @@
 @Metadata.layer: #CORE
 
+@UI.headerInfo: {
+    typeName: 'Excel Upload Data',
+    typeNamePlural: 'Excel Upload Data',
+    title: { value: 'FileName' },
+    description: { value: 'StatusCode' }
+  }
 annotate entity ZC_CR82_ExcelUploadData with
 {
 
-  @UI.lineItem: [{ position: 10, type: #FOR_ACTION, dataAction: 'uploadExcelFile', label: 'Upload Excel' }]
-  Uuid;
+
+  @UI.facet: [{ id: 'General',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'General Information',
+                position: 10 }
+                ]
+
   @UI.lineItem: [{ position: 20, label: 'File Name' }]
+  @UI.identification: [{ position: 10, label: 'File Name' }]
   FileName;
   @UI.lineItem: [{ position: 30, label: 'Upload Date' }]
+  @UI.identification: [{ position: 20, label: 'Upload Date' }]
   UploadDateTime;
-  @UI.lineItem: [{ position: 40, label: 'Data Column 1' }]
-  DataColumn1;
-  @UI.lineItem: [{ position: 50, label: 'Data Column 2' }]
-  DataColumn2;
-  @UI.lineItem: [{ position: 60, label: 'Data Column 3' }]
-  DataColumn3;
-  @UI.lineItem: [{ position: 70, label: 'Data Column 4' }]
-  DataColumn4;
-  @UI.lineItem: [{ position: 80, label: 'Data Column 5' }]
-  DataColumn5;
   @UI.lineItem: [{ position: 90, label: 'Status' }]
+  @UI.identification: [{ position: 30, label: 'Status' }]
   StatusCode;
   @UI.lineItem: [{ position: 100, label: 'Data Mod 1' }]
+  @UI.identification: [{ position: 40, label: 'Data Mod 1' }]
   LastChangedAt;
   @UI.lineItem: [{ position: 110, label: 'Local Last Changed At' }]
+  @UI.identification: [{ position: 50, label: 'Local Last Changed At' }]
   LocalLastChangedAt;
+
+  @UI.identification: [{ position: 60, label: 'File Content' }]
+  FileContent;
 
 }

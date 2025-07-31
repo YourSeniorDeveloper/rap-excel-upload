@@ -15,7 +15,7 @@ authorization master ( instance )
   // O parâmetro %param referencia a entidade abstrata ZI_CR82_ExcelUploadFileRequest
   // O resultado [1] $self significa que a action retorna 1 instância da entidade raiz,
   // o que ajuda o Fiori Elements a atualizar a lista após o upload.
-  action uploadExcelFile parameter ZI_CR82_ExcelUploadFileRequest result [1] $self;
+  //static action ( authorization : global ) uploadExcelFile parameter ZI_CR82_ExcelUploadFileRequest result [1] $self;
 
   create ( authorization : global );
   update;
@@ -26,12 +26,9 @@ authorization master ( instance )
   {
     Uuid = uuid;
     FileName = file_name;
+    FileContent = file_content;
+    MimeType = mime_type;
     UploadDateTime = upload_date_time;
-    DataColumn1 = data_column_1;
-    DataColumn2 = data_column_2;
-    DataColumn3 = data_column_3;
-    DataColumn4 = data_column_4;
-    DataColumn5 = data_column_5;
     StatusCode = status_code;
     LastChangedAt = last_changed_at;
     LocalLastChangedAt = local_last_changed_at;
