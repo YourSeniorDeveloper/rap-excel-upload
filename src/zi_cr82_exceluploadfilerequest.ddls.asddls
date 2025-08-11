@@ -2,7 +2,6 @@
 @Metadata.allowExtensions: true
 
 define abstract entity ZI_CR82_ExcelUploadFileRequest
-
 {
   @EndUserText.label: 'Conteúdo do Arquivo (XSTRING)'
   @Semantics.largeObject: {

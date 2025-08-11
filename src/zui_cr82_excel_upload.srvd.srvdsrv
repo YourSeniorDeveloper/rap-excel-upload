@@ -1,4 +1,0 @@
-@EndUserText.label: 'Service Definition'
-define service ZUI_CR82_EXCEL_UPLOAD {
-  expose ZC_CR82_ExcelUploadData;
-}
