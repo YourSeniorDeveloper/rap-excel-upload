@@ -1,0 +1,31 @@
+@Metadata.layer: #CORE
+annotate entity ZC_CR82_T_EXCEL_DT
+    with 
+{
+  @UI.facet: [{ id: 'General',
+                  purpose: #STANDARD,
+                  type: #IDENTIFICATION_REFERENCE,
+                  label: 'Item Information',
+                  position: 10 }]
+
+  @UI.lineItem: [{ position: 20, label: 'Linha' }]
+  @UI.identification: [{ position: 20, label: 'Linha' }]
+  Linha;
+  @UI.lineItem: [{ position: 30, label: 'Coluna1' }]
+  @UI.identification: [{ position: 30, label: 'Coluna1' }]
+  Coluna1;
+  @UI.lineItem: [{ position: 40, label: 'Coluna2' }]
+  @UI.identification: [{ position: 40, label: 'Coluna2' }]
+  Coluna2;
+  @UI.lineItem: [{ position: 50, label: 'Coluna3' }]
+  @UI.identification: [{ position: 50, label: 'Coluna3' }]
+  Coluna3;
+  @UI.lineItem: [{ position: 60, label: 'Coluna4' }]
+  @UI.identification: [{ position: 60, label: 'Coluna4' }]
+  Coluna4;
+  @UI.lineItem: [{ position: 70, label: 'Coluna5' }]
+  @UI.identification: [{ position: 70, label: 'Coluna5' }]
+  Coluna5;
+
+    
+}

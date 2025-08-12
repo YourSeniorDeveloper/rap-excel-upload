@@ -1,0 +1,41 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  typeName: 'Sales Order',
+  typeNamePlural: 'Sales Orders',
+  title: { type: #STANDARD, value: 'FileName' },
+  description: { type: #STANDARD, value: 'MimeType' }
+}
+annotate entity ZC_CR82_T_EXCEL_UP with
+{
+  @UI.facet: [{ id: 'General',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'General Information',
+                position: 10 },
+              { targetElement: '_Conteudo',
+                id: 'Items',
+                type: #LINEITEM_REFERENCE,
+                label: 'Items',
+                position: 20 }]
+
+  @UI.lineItem: [{ position: 10 }, { type: #FOR_ACTION, dataAction: 'UploadExcel', label: 'Carregar Excel'}]
+  Uuid;
+
+  @UI.identification: [{ position: 10, label: 'Nome Arquivo' }]
+  @UI.lineItem: [{ position: 10, label: 'Nome Arquivo' }]
+  @Search.defaultSearchElement: true
+  FileName;
+
+  @UI.identification: [{ position: 20, label: 'Upload Date' }]
+  @UI.lineItem: [{ position: 20, label: 'Upload Date' }]
+  UploadDateTime;
+  @UI.identification: [{ position: 30, label: 'Mime Type' }]
+  @UI.lineItem: [{ position: 30, label: 'Mime Type' }]
+  MimeType;
+  @UI.identification: [{ position: 40, label: 'Status' }]
+  @UI.lineItem: [{ position: 40, label: 'Status' }]
+  StatusCode;
+  @UI.identification: [{ position: 50, label: 'Last Changed' }]
+  LastChangedAt;
+
+}

@@ -1,6 +1,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Conteudo Excel'
 @Metadata.ignorePropagatedAnnotations: true
+@Metadata.allowExtensions: true
 define view entity ZC_CR82_T_EXCEL_DT as projection on ZI_CR82_T_EXCEL_DT
 {
     key UuidHeader,

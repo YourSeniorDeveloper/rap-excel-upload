@@ -1,0 +1,21 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_CR82_T_EXCEL_UP //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+
+  use action UploadExcel;
+
+  use association _Conteudo { create; }
+}
+
+define behavior for ZC_CR82_T_EXCEL_DT //alias <alias_name>
+{
+  use update;
+  use delete;
+
+  use association _Header;
+}

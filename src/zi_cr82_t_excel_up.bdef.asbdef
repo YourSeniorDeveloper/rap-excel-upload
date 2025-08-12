@@ -1,0 +1,55 @@
+managed implementation in class zbp_i_cr82_t_excel_up unique;
+strict ( 2 );
+
+define behavior for ZI_CR82_T_EXCEL_UP //alias <alias_name>
+persistent table zcr82_t_excel_up
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly, numbering : managed ) Uuid;
+  association _Conteudo { create; }
+
+  static action (authorization : global) UploadExcel parameter ZI_CR82_EXCELUPLOADFILEREQUEST;
+
+  mapping for zcr82_t_excel_up
+  {
+    Uuid = uuid;
+    FileName = file_name;
+    MimeType = mime_type;
+    StatusCode = status_code;
+    UploadDateTime = upload_date_time;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+}
+
+define behavior for ZI_CR82_T_EXCEL_DT //alias <alias_name>
+persistent table zcr82_t_excel_dt
+lock dependent by _Header
+authorization dependent by _Header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) UuidHeader;
+  field ( readonly:update ) Linha;
+  association _Header;
+
+  mapping for zcr82_t_excel_dt
+  {
+    UuidHeader = uuid_header;
+    Linha = linha;
+    Coluna1 = coluna1;
+    Coluna2 = coluna2;
+    Coluna3 = coluna3;
+    Coluna4 = coluna4;
+    Coluna5 = coluna5;
+
+  }
+
+}
