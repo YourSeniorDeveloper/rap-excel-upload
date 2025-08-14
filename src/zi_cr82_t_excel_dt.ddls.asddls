@@ -11,6 +11,8 @@ association to parent ZI_CR82_T_EXCEL_UP as _Header on _Header.Uuid = $projectio
     coluna3 as Coluna3,
     coluna4 as Coluna4,
     coluna5 as Coluna5,
+    last_changed_at as LastChangedAt,
+    local_last_changed_at as LocalLastChangedAt,
     
     _Header
 }

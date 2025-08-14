@@ -7,7 +7,7 @@ define abstract entity ZI_CR82_ExcelUploadFileRequest
   @Semantics.largeObject: {
     fileName: 'file_name',
     mimeType: 'mime_type',
-    contentDispositionPreference: #ATTACHMENT
+    contentDispositionPreference: #INLINE
   } 
   file_content : /dmo/attachment;
   

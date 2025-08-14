@@ -1,17 +1,27 @@
 managed implementation in class zbp_i_cr82_t_excel_up unique;
 strict ( 2 );
-
+with draft;
 define behavior for ZI_CR82_T_EXCEL_UP //alias <alias_name>
 persistent table zcr82_t_excel_up
+draft table zcr82_t_excel_ud
 lock master
+total etag LocalLastChangedAt
+etag master LastChangedAt
 authorization master ( instance )
 //etag master <field_name>
 {
-  create ( authorization : global );
+  create;
   update;
   delete;
   field ( readonly, numbering : managed ) Uuid;
   association _Conteudo { create; }
+
+  draft action Edit ;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+
+  draft determine action Prepare ;
 
   static action (authorization : global) UploadExcel parameter ZI_CR82_EXCELUPLOADFILEREQUEST;
 
@@ -30,8 +40,10 @@ authorization master ( instance )
 
 define behavior for ZI_CR82_T_EXCEL_DT //alias <alias_name>
 persistent table zcr82_t_excel_dt
+draft table zcr82_t_excel_dd
 lock dependent by _Header
 authorization dependent by _Header
+etag master LastChangedAt
 //etag master <field_name>
 {
   update;
@@ -49,6 +61,8 @@ authorization dependent by _Header
     Coluna3 = coluna3;
     Coluna4 = coluna4;
     Coluna5 = coluna5;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
 
   }
 

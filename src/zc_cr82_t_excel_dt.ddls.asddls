@@ -11,6 +11,9 @@ define view entity ZC_CR82_T_EXCEL_DT as projection on ZI_CR82_T_EXCEL_DT
     Coluna3,
     Coluna4,
     Coluna5,
+    LastChangedAt,
+    LocalLastChangedAt,
+
     /* Associations */
     _Header: redirected to parent ZC_CR82_T_EXCEL_UP
 }
