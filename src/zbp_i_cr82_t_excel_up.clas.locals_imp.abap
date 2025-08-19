@@ -6,8 +6,9 @@ CLASS lhc_ZI_CR82_T_EXCEL_UP DEFINITION INHERITING FROM cl_abap_behavior_handler
 
     METHODS get_global_authorizations FOR GLOBAL AUTHORIZATION
       IMPORTING REQUEST requested_authorizations FOR zi_cr82_t_excel_up RESULT result.
-    METHODS uploadexcel FOR MODIFY
-      IMPORTING keys FOR ACTION zi_cr82_t_excel_up~uploadexcel.
+
+    METHODS UploadExcel FOR MODIFY
+      IMPORTING keys FOR ACTION zi_cr82_t_excel_up~UploadExcel.
 
 ENDCLASS.
 

@@ -112,6 +112,12 @@
      <GROUPNAME>%ADMIN</GROUPNAME>
     </DD03P>
    </DD03P_TABLE>
+   <TABL_EXTRAS>
+    <TDDAT>
+     <TABNAME>ZCR82_T_EXCEL_DD</TABNAME>
+     <CCLASS>CUS_DEV_SUP_DA</CCLASS>
+    </TDDAT>
+   </TABL_EXTRAS>
   </asx:values>
  </asx:abap>
 </abapGit>
