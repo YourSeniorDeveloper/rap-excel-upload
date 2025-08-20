@@ -8,7 +8,6 @@ define root view entity ZC_CR82_T_EXCEL_UP
     key Uuid,
     FileName,
     UploadDateTime,
-    MimeType,
     StatusCode,
     LastChangedAt,
     LocalLastChangedAt,

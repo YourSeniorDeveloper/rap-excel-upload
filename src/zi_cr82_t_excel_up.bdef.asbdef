@@ -29,7 +29,6 @@ authorization master ( instance )
   {
     Uuid = uuid;
     FileName = file_name;
-    MimeType = mime_type;
     StatusCode = status_code;
     UploadDateTime = upload_date_time;
     LastChangedAt = last_changed_at;

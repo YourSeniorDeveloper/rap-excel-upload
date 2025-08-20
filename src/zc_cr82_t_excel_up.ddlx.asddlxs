@@ -1,9 +1,9 @@
 @Metadata.layer: #CORE
 @UI.headerInfo: {
-  typeName: 'Sales Order',
-  typeNamePlural: 'Sales Orders',
+  typeName: 'Excel Upload',
+  typeNamePlural: 'Uoloads',
   title: { type: #STANDARD, value: 'FileName' },
-  description: { type: #STANDARD, value: 'MimeType' }
+  description: { type: #STANDARD, value: 'UploadDateTime' }
 }
 annotate entity ZC_CR82_T_EXCEL_UP with
 {
@@ -29,13 +29,10 @@ annotate entity ZC_CR82_T_EXCEL_UP with
   @UI.identification: [{ position: 20, label: 'Upload Date' }]
   @UI.lineItem: [{ position: 20, label: 'Upload Date' }]
   UploadDateTime;
-  @UI.identification: [{ position: 30, label: 'Mime Type' }]
-  @UI.lineItem: [{ position: 30, label: 'Mime Type' }]
-  MimeType;
-  @UI.identification: [{ position: 40, label: 'Status' }]
-  @UI.lineItem: [{ position: 40, label: 'Status' }]
+  @UI.identification: [{ position: 30, label: 'Status' }]
+  @UI.lineItem: [{ position: 30, label: 'Status' }]
   StatusCode;
-  @UI.identification: [{ position: 50, label: 'Last Changed' }]
+  @UI.identification: [{ position: 40, label: 'Last Changed' }]
   LastChangedAt;
 
 }
