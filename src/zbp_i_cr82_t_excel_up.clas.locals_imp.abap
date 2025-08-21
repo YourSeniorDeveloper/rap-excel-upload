@@ -21,6 +21,13 @@ CLASS lhc_ZI_CR82_T_EXCEL_UP IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD UploadExcel.
+
+  INSERT VALUE #( %msg        = me->new_message_with_text( severity = CONV #( 'E' )
+                                                         text     = 'Teste' ) ) INTO TABLE reported-zi_cr82_t_excel_up.
+
+  INSERT VALUE #( %msg        = me->new_message_with_text( severity = CONV #( 'E' )
+                                                         text     = 'Teste2' ) ) INTO TABLE reported-zi_cr82_t_excel_up.
+
   ENDMETHOD.
 
 ENDCLASS.
